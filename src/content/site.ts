@@ -49,7 +49,7 @@ export const pageMeta = {
     label: 'FAQ',
     title: 'FAQ — pickleball video review on iPhone',
     description:
-      'Answers about Replay Rally: what it costs, what it uploads (nothing), supported phones and videos, accuracy, calibration, AI plans, and refunds.',
+      'Answers about Replay Rally: what it costs, what it uploads, supported phones and videos, accuracy, calibration, AI plans, and refunds.',
     llmsDescription: 'Answers about price, privacy, compatibility, detection, exports, AI plans, and support.',
   },
   support: {
@@ -65,8 +65,8 @@ export const pageMeta = {
     label: 'Privacy',
     title: 'Privacy policy',
     description:
-      'Replay Rally collects no personal data and never connects to the internet. Videos stay on your iPhone.',
-    llmsDescription: 'Privacy policy for an app that processes video on-device and makes no network requests.',
+      'Replay Rally works on your iPhone without an account. Optional feedback sharing, on by default, sends corrected rally excerpts only to improve rally detection.',
+    llmsDescription: 'Privacy policy: on-device video processing, plus optional, on-by-default feedback uploads used only to improve rally detection.',
   },
   press: {
     path: '/press/',
@@ -224,9 +224,9 @@ export const home = {
     'A future update will add optional AI coaching — how the point ended, what to work on, the patterns that cost you games — as a paid subscription, because running it costs real money. Rally detection, playback, and export are included in the one-time price and will stay that way.',
   privacyHeading: 'Private by design',
   privacyFacts: [
-    'No account, no analytics, no servers — the developer never sees your footage.',
+    'No account, no advertising, no tracking. Detection, editing, and export all run on your iPhone.',
     'Add-only Photos access: Replay Rally can save clips but cannot read your library.',
-    'No internet connection, period. Replay Rally never uploads, phones home, or reports anything.',
+    'Feedback sharing is on by default: when you correct a rally, the corrected excerpt is sent only to improve detection. Turn it off anytime in Settings.',
   ],
   privacyLink: 'Privacy policy →',
   questionsHeading: 'Questions',
@@ -234,7 +234,7 @@ export const home = {
     {
       question: 'Does Replay Rally upload my video?',
       answer:
-        'No. Rally detection, playback, marking, calibration, and export all run on your iPhone. The app never connects to the internet.',
+        'Not to use the app — detection, playback, marking, and export all run on your iPhone. Feedback sharing is on by default: when you correct a rally, that corrected excerpt and its audio are sent over Wi-Fi to improve rally detection. Turn it off in Settings → Improve rally detection.',
     },
     {
       question: 'What if it misses a rally or picks up the next court?',
@@ -312,7 +312,7 @@ export const howItWorks = {
     ai: {
       heading: 'What about AI coaching?',
       paragraphs: [
-        'Not in this version. AI coaching — what ended a point, what to work on, the patterns that cost you games — is planned as an optional paid subscription in a future update, because running it costs real money. Nothing on this page depends on it, and the app today makes no network requests at all.',
+        'Not in this version. AI coaching — what ended a point, what to work on, the patterns that cost you games — is planned as an optional paid subscription in a future update, because running it costs real money. Nothing on this page depends on it.',
       ],
     },
   },
@@ -337,7 +337,7 @@ export const faq = {
     {
       question: 'Does Replay Rally upload my video anywhere?',
       answer:
-        'No. Rally detection, playback, marking, calibration, and export all run on your iPhone. The app never connects to the internet, so nothing can be uploaded.',
+        'Only what you correct, and only while feedback sharing is on (it is on by default). Detection, playback, marking, and export all run on your iPhone. When you correct a rally, the app sends that excerpt with a few seconds of context, its audio, your corrections, and app diagnostics over Wi-Fi, used only to improve rally detection. Turn it off anytime in Settings → Improve rally detection; everything keeps working. Feedback already sent stays stored.',
     },
     {
       question: 'Which iPhones and videos are supported?',
@@ -460,22 +460,38 @@ export const support = {
 } as const;
 
 export const privacy = {
-  eyebrow: 'PRIVACY POLICY · EFFECTIVE SEPTEMBER 6, 2026',
-  heading: { before: 'Your footage ', band: 'stays on your phone.', after: '' },
+  eyebrow: 'PRIVACY POLICY · EFFECTIVE SEPTEMBER 27, 2026',
+  heading: { before: 'Your footage, ', band: 'your choice.', after: '' },
   directAnswer:
-    'Replay Rally does not collect, store, or transmit your personal data. There are no accounts, no analytics, no advertising, and no servers operated by the developer.',
+    'Replay Rally detects rallies, plays videos, saves your edits, and exports clips on your iPhone. No account or upload is needed for any of that. Optional feedback sharing, on by default, sends the rallies you correct to us only to improve rally detection.',
   sections: [
     {
       heading: 'Your videos',
-      body: 'Videos you open stay on your device. Rally detection, playback, marking, calibration, and clip export run entirely on your iPhone. Clips are saved to your photo library using add-only access; the app cannot read or browse your library.',
+      body: 'You choose a recording with the system picker. Detection, playback, marking, and clip export run on your iPhone. Clips are saved with add-only Photos access; the app cannot read or browse your library.',
     },
     {
-      heading: 'Network use',
-      body: 'Replay Rally never connects to the internet. It makes no network requests of any kind: no uploads, no analytics, no crash reports, no update checks. If a future version adds an online feature, it will be optional, clearly labeled in the app, and described here before it ships.',
+      heading: 'Feedback to improve the model',
+      body: 'Feedback sharing is optional and on by default. While “Share rally corrections” is on in Settings, Replay Rally uploads your existing and future corrections to our feedback service over Wi-Fi. Each upload includes the corrected video excerpts and their audio with five seconds of context, a few short stretches of the time between rallies, both detectors’ results, your edits, which parts of the video you watched, and app, build, model, and performance diagnostics. A random installation identifier authorizes sending. Nothing is sent for videos you have not corrected.',
     },
     {
-      heading: 'Data retention',
-      body: 'Rally markers, manual labels, and calibration settings are stored on your device so you don’t redo work. Deleting the app deletes them. The developer never receives them.',
+      heading: 'How we use it',
+      body: 'Only to investigate detection mistakes and improve Replay Rally’s rally-detection model. Never for advertising or tracking. Footage is not anonymized: video can show people.',
+    },
+    {
+      heading: 'Your choice',
+      body: 'Turn off Settings → Improve rally detection → “Share rally corrections” at any time to stop further uploads; every feature keeps working. Feedback already sent stays stored; turning sharing off does not delete it.',
+    },
+    {
+      heading: 'Recording metadata',
+      body: 'Feedback excerpts omit camera metadata such as location. Excerpts prepared by builds before September 26, 2026 may still carry it.',
+    },
+    {
+      heading: 'Purchases',
+      body: 'Apple handles purchases through the App Store. AI coaching is not available in this version.',
+    },
+    {
+      heading: 'Data on your device',
+      body: 'Rally markers and edits are stored on your device so you don’t redo work. Deleting the app deletes them.',
     },
     {
       heading: 'This website',
@@ -502,7 +518,7 @@ export const press = {
     },
     {
       label: 'Short',
-      body: 'Replay Rally is an iPhone app for reviewing pickleball videos. It detects rallies from the sound of paddle contact — entirely on-device, no upload — then lets players jump point to point, watch in slow motion at full resolution, and export single rallies or a dead-time-free highlight reel to Photos. It costs $19.99 once and never connects to the internet.',
+      body: 'Replay Rally is an iPhone app for reviewing pickleball videos. It detects rallies from the sound of paddle contact — entirely on-device, no upload — then lets players jump point to point, watch in slow motion at full resolution, and export single rallies or a dead-time-free highlight reel to Photos. It costs $19.99 once. Optional feedback sharing, on by default, sends corrected rally excerpts to improve detection.',
     },
     {
       label: 'Maker',
@@ -516,7 +532,7 @@ export const press = {
     ['Category', 'Sports'],
     ['Launch', 'September 2026'],
     ['Detection', 'on-device audio signal processing'],
-    ['Network use', 'none — the app never connects to the internet'],
+    ['Network use', 'optional feedback uploads (on by default) to improve rally detection'],
     ['Developer', 'Independent'],
     ['Contact', SUPPORT_EMAIL || 'via the support page'],
   ],
@@ -529,11 +545,11 @@ export const press = {
 
 export const llmsFacts = [
   'Replay Rally is an iPhone app (iOS 17+) for reviewing pickleball videos; $19.99 one-time on the App Store; no subscription, no account.',
-  'Finds rallies from the audio of paddle contact (1–8 kHz), on-device, in seconds; nothing is uploaded.',
+  'Finds rallies from the audio of paddle contact (1–8 kHz), on-device, in seconds; detection needs no upload.',
   'Features: rally timeline with per-shot dots, frame-accurate jog wheel with haptics, ¼×–1.5× playback at original resolution, 8× zoom, one-tap rally clips, and “All rallies (no dead time)” highlight-reel export to Photos.',
   'Manual marking and on-device calibration fix missed or extra rallies.',
-  'No AI features in 1.0 and no network requests; optional AI coaching is planned as a future paid subscription.',
-  'Privacy: no analytics, no servers, add-only Photos access.',
+  'No AI features in 1.0; optional AI coaching is planned as a future paid subscription.',
+  'Privacy: optional feedback sharing, on by default, sends corrected rally excerpts only to improve detection; no advertising or tracking; add-only Photos access.',
 ] as const;
 
 export type PageKey = keyof typeof pageMeta;
