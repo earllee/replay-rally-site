@@ -218,7 +218,7 @@ export const home = {
   price: '$19.99',
   priceEyebrow: 'ONE-TIME PURCHASE',
   priceBody:
-    'Replay Rally costs $19.99 once on the App Store. There is no subscription, no account, and no in-app purchase. Every feature above works offline, forever. That’s less than most players pay for a single session of open play.',
+    'Replay Rally costs $19.99 once on the App Store, and you can try it on your first three videos before paying. There is no subscription and no account. Every feature above works offline, forever. That’s less than most players pay for a single session of open play.',
   aiHeading: 'AI coaching is on the roadmap',
   aiBody:
     'A future update will add optional AI coaching — how the point ended, what to work on, the patterns that cost you games — as a paid subscription, because running it costs real money. Rally detection, playback, and export are included in the one-time price and will stay that way.',
@@ -246,7 +246,7 @@ export const home = {
       answer:
         'Any iPhone running iOS 17 or later, and any video that plays in the Photos app — including footage imported from a GoPro, DJI, or camera. iPad support is planned.',
     },
-    { question: 'Is it a subscription?', answer: 'No. Your first three videos are free; one $19.99 purchase unlocks the rest.' },
+    { question: 'Is it a subscription?', answer: 'No. $19.99 once, and you can try it on your first three videos before paying.' },
   ],
   questionsLink: 'All questions →',
   finalHeading: { before: 'Stop scrolling. ', band: 'Start replaying.', after: '' },
@@ -323,7 +323,7 @@ export const faq = {
   eyebrow: 'FAQ',
   heading: { before: 'Questions, ', band: 'answered.', after: '' },
   directAnswer:
-    'Replay Rally is an iPhone app that finds rallies in pickleball videos on-device — free for your first three videos, $19.99 once to unlock the rest. Below are the questions people ask before and after buying it.',
+    'Replay Rally is a $19.99 iPhone app that finds rallies in pickleball videos on-device. Below are the questions people ask before and after buying it.',
   items: [
     {
       question: 'What is Replay Rally?',
@@ -332,7 +332,7 @@ export const faq = {
     },
     {
       question: 'How much does it cost?',
-      answer: 'Free to download, and your first three videos work in full. One $19.99 in-app purchase unlocks every video after that and removes the export watermark. No subscription, no account.',
+      answer: '$19.99, once, on the App Store. You can try it on your first three videos before paying; the purchase then unlocks every video and removes the export watermark. No subscription, no account.',
     },
     {
       question: 'Does Replay Rally upload my video anywhere?',
@@ -526,7 +526,7 @@ export const press = {
     },
     {
       label: 'Short',
-      body: 'Replay Rally is an iPhone app for reviewing pickleball videos. It detects rallies from the sound of paddle contact — entirely on-device, no upload — then lets players jump point to point, watch in slow motion at full resolution, and export single rallies or a dead-time-free highlight reel to Photos. It costs $19.99 once. Optional feedback sharing, on by default, sends corrections and numeric detection measurements, not video, to improve detection.',
+      body: 'Replay Rally is an iPhone app for reviewing pickleball videos. It detects rallies from the sound of paddle contact, entirely on-device — videos stay on the phone unless the player opts in to sending them — then lets players jump point to point, watch in slow motion at full resolution, and export single rallies or a dead-time-free highlight reel to Photos. It costs $19.99 once. Optional feedback sharing, on by default, sends corrections and numeric detection measurements, not video, to improve detection.',
     },
     {
       label: 'Maker',
