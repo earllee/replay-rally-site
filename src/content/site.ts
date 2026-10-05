@@ -49,7 +49,7 @@ export const pageMeta = {
     label: 'FAQ',
     title: 'FAQ — pickleball video review on iPhone',
     description:
-      'Answers about Replay Rally: what it costs, what it uploads, supported phones and videos, accuracy, AI plans, and refunds.',
+      'Answers about Replay Rally: what it costs, privacy, supported phones and videos, accuracy, AI plans, and refunds.',
     llmsDescription: 'Answers about price, privacy, compatibility, detection, exports, AI plans, and support.',
   },
   support: {
@@ -136,7 +136,7 @@ export const home = {
   eyebrow: 'REPLAY RALLY FOR IPHONE · $19.99 ONE TIME',
   heading: { before: 'Skip to the ', band: 'good parts.', after: '' },
   directAnswer:
-    'Replay Rally is an iPhone app for reviewing pickleball videos. Open any game recording from Photos and it finds every rally on your phone in seconds — no upload, no account — so you can jump point to point, slow the fast ones down, and save a highlight reel with the standing-around cut out.',
+    'Replay Rally is an iPhone app for reviewing pickleball videos. Open any game recording from Photos and it finds every rally on your phone in seconds — entirely on-device, no account — so you can jump point to point, slow the fast ones down, and save a highlight reel with the standing-around cut out.',
   secondaryCta: 'See how it works →',
   proofs: [
     {
@@ -145,7 +145,7 @@ export const home = {
     },
     {
       value: '90',
-      label: 'Rallies found in one 18:58 game, in seconds, with nothing uploaded',
+      label: 'Rallies found in one 18:58 game, in seconds, entirely on-device',
     },
     {
       value: 'Seconds',
@@ -226,20 +226,20 @@ export const home = {
   privacyFacts: [
     'No account, no advertising, no tracking. Detection, editing, and export all run on your iPhone.',
     'Add-only Photos access: Replay Rally can save clips but cannot read your library.',
-    'Feedback sharing is on by default: when you correct a rally, your corrections and numeric detection measurements — not video or audio — are sent only to improve detection. Turn it off anytime in Settings.',
+    'Processing and detection are entirely on-device.',
   ],
   privacyLink: 'Privacy policy →',
   questionsHeading: 'Questions',
   questions: [
     {
-      question: 'Does Replay Rally upload my video?',
+      question: 'Is my video processed on my phone?',
       answer:
-        'Not by default. Detection, playback, marking, and export all run on your iPhone. Feedback sharing is on by default, but it sends your corrections and numeric detection measurements, not video or audio. Uploading the full video of recordings you correct is a separate setting, off unless you turn it on. Both are in Settings → Improve rally detection.',
+        'Yes. Processing and detection are entirely on-device: detection, playback, marking, and export all run on your iPhone, with no account. See the privacy policy for details.',
     },
     {
       question: 'What if it misses a rally or picks up the next court?',
       answer:
-        'Mark the rally by hand with two taps — at the serve and when the ball is dead. With feedback sharing on, your marks help improve the detector.',
+        'Mark the rally by hand with two taps — at the serve and when the ball is dead.',
     },
     {
       question: 'What phones and videos does it support?',
@@ -257,7 +257,7 @@ export const howItWorks = {
   eyebrow: 'HOW IT WORKS',
   heading: { before: 'It finds rallies by ', band: 'listening,', after: ' not watching.' },
   directAnswer:
-    'Replay Rally finds rallies by analyzing the audio track of your video for the distinctive pop of a pickleball paddle, then grouping those strikes into points. The analysis runs on your iPhone in seconds and nothing is uploaded.',
+    'Replay Rally finds rallies by analyzing the audio track of your video for the distinctive pop of a pickleball paddle, then grouping those strikes into points. The analysis runs entirely on your iPhone, in seconds.',
   sections: {
     audio: {
       heading: 'Why audio instead of video?',
@@ -291,13 +291,13 @@ export const howItWorks = {
     accuracy: {
       heading: 'How accurate is it?',
       paragraphs: [
-        'On a court with one game and a phone within earshot, Replay Rally finds almost every rally with edges within a few tenths of a second of the serve and the ball going dead. The hard case is a busy rec center with games on both sides and a far-away phone: some quiet, far-side points can be missed and occasional strikes from the next court can be picked up. Both have a fix: a missed rally takes two taps to mark by hand, a false one is one tap on the trash button to remove. With feedback sharing on, those corrections help improve the detector — see the next section.',
+        'On a court with one game and a phone within earshot, Replay Rally finds almost every rally with edges within a few tenths of a second of the serve and the ball going dead. The hard case is a busy rec center with games on both sides and a far-away phone: some quiet, far-side points can be missed and occasional strikes from the next court can be picked up. Both have a fix: a missed rally takes two taps to mark by hand, a false one is one tap on the trash button to remove — see the next section.',
       ],
     },
     calibration: {
       heading: 'What happens when you mark a rally?',
       paragraphs: [
-        'Mark any rally by hand — tap Mark at the serve, tap again when the ball is dead — and it is added to the timeline right away. Drag a rally’s edges on the wheel to trim it, or delete one the detector picked up from the next court. With feedback sharing on, those corrections are sent to improve the detector in future updates.',
+        'Mark any rally by hand — tap Mark at the serve, tap again when the ball is dead — and it is added to the timeline right away. Drag a rally’s edges on the wheel to trim it, or delete one the detector picked up from the next court.',
       ],
     },
     highlight: {
@@ -335,9 +335,9 @@ export const faq = {
       answer: '$19.99, once, on the App Store. You can try it on your first three videos before paying; the purchase then unlocks every video and removes the export watermark. No subscription, no account.',
     },
     {
-      question: 'Does Replay Rally upload my video anywhere?',
+      question: 'Is my video processed on my phone?',
       answer:
-        'Not by default. Detection, playback, marking, and export all run on your iPhone. Feedback sharing, on by default, sends your corrections, numeric pose, motion and sound measurements the detector computed (not video or audio), and app diagnostics, used only to improve rally detection. “Also send full videos” is a separate setting, off by default: only if you turn it on does the original video, with its audio, of each recording you correct upload over Wi-Fi. Both are in Settings → Improve rally detection; everything keeps working with them off. Feedback already sent stays stored.',
+        'Yes. Processing and detection are entirely on-device: detection, playback, marking, and export all run on your iPhone, with no account. See the privacy policy for details.',
     },
     {
       question: 'Which iPhones and videos are supported?',
@@ -364,7 +364,7 @@ export const faq = {
     {
       question: 'How accurate is rally detection?',
       answer:
-        'On a court with one game and a phone within earshot it finds almost every rally. Busy rec centers with games on adjacent courts are the hard case — some far-side points can be missed and the next court can occasionally be picked up. Mark missed rallies by hand and delete ones from the next court; with sharing on, those corrections help improve the detector.',
+        'On a court with one game and a phone within earshot it finds almost every rally. Busy rec centers with games on adjacent courts are the hard case — some far-side points can be missed and the next court can occasionally be picked up. Mark missed rallies by hand and delete ones from the next court.',
     },
     {
       question: 'What if it misses a rally?',
@@ -438,7 +438,7 @@ export const support = {
     {
       question: 'It missed a rally.',
       answer:
-        'Tap Mark at the serve and again when the ball is dead. With feedback sharing on, the correction helps improve detection in future updates.',
+        'Tap Mark at the serve and again when the ball is dead.',
     },
     {
       question: 'It found rallies from the court next to mine.',
@@ -526,7 +526,7 @@ export const press = {
     },
     {
       label: 'Short',
-      body: 'Replay Rally is an iPhone app for reviewing pickleball videos. It detects rallies from the sound of paddle contact, entirely on-device — videos stay on the phone unless the player opts in to sending them — then lets players jump point to point, watch in slow motion at full resolution, and export single rallies or a dead-time-free highlight reel to Photos. It costs $19.99 once. Optional feedback sharing, on by default, sends corrections and numeric detection measurements, not video, to improve detection.',
+      body: 'Replay Rally is an iPhone app for reviewing pickleball videos. It detects rallies from the sound of paddle contact, entirely on-device, then lets players jump point to point, watch in slow motion at full resolution, and export single rallies or a dead-time-free highlight reel to Photos. It costs $19.99 once.',
     },
     {
       label: 'Maker',
@@ -540,7 +540,6 @@ export const press = {
     ['Category', 'Sports'],
     ['Launch', 'September 2026'],
     ['Detection', 'on-device audio signal processing'],
-    ['Network use', 'optional feedback: corrections and detection measurements on by default, full videos off by default'],
     ['Developer', 'Independent'],
     ['Contact', SUPPORT_EMAIL || 'via the support page'],
   ],
@@ -553,11 +552,11 @@ export const press = {
 
 export const llmsFacts = [
   'Replay Rally is an iPhone app (iOS 17+) for reviewing pickleball videos; $19.99 one-time on the App Store; no subscription, no account.',
-  'Finds rallies from the audio of paddle contact (1–8 kHz), on-device, in seconds; detection needs no upload.',
+  'Finds rallies from the audio of paddle contact (1–8 kHz), entirely on-device, in seconds.',
   'Features: rally timeline with per-shot dots, frame-accurate jog wheel with haptics, ¼×–1.5× playback at original resolution, 8× zoom, one-tap rally clips, and “All rallies (no dead time)” highlight-reel export to Photos.',
   'Manual marking, trimming, and deleting fix missed or extra rallies.',
   'No AI features in 1.0; optional AI coaching is planned as a future paid subscription.',
-  'Privacy: optional feedback sharing (on by default) sends corrections and numeric detection measurements, not video or audio; full-video upload is a separate setting, off by default; used only to improve detection; no advertising or tracking; add-only Photos access.',
+  'Privacy: processing and detection are entirely on-device; no advertising or tracking; add-only Photos access.',
 ] as const;
 
 export type PageKey = keyof typeof pageMeta;
