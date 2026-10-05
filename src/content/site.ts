@@ -475,7 +475,7 @@ export const privacy = {
     },
     {
       heading: '“I checked the whole video”',
-      body: 'Optionally, you can mark a video as checked — every rally’s start and end is right and none is missing — and add the sport, the camera angle, and an optional note. With sharing on, that report is sent with your corrections. It does not upload the video.',
+      body: 'Optionally, you can mark a video as checked: every rally’s start and end is right and none is missing. With sharing on, that confirmation is sent with your corrections. It does not upload the video.',
     },
     {
       heading: 'Optional full videos',
